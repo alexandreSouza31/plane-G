@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+h1{
+  font-size: 1.3rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+  background-color: #efe011;
+  box-shadow: 1px 1px 10px 2px;
+}
+
+h1 >img{
+  position: relative;
+  margin-left: .5rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
