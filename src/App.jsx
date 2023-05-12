@@ -8,6 +8,7 @@ import NewTrip from "./components/pages/NewTrip";
 import Navbar from "./components/layoult/Navbar";
 
 import Container from "./components/layoult/Container";
+import Trips from "./components/pages/Trips";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Container customClass="min-height">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/trips" element={<Trips />} />
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/newtrip" element={<NewTrip />} />
