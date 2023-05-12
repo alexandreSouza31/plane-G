@@ -5,20 +5,14 @@ import Home from "./components/pages/Home";
 import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import NewTrip from "./components/pages/NewTrip";
-import Logo from "./img/logo.png";
+import Navbar from "./components/layoult/Navbar";
 
 import Container from "./components/layoult/Container";
 
 function App() {
   return (
     <BrowserRouter>
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/company">Empresa</Link>
-        <Link to="/contact">Contato</Link>
-        <Link to="/newtrip">Novo Projeto</Link>
-        <Link to="/"><img src={Logo} /></Link>
-      </ul>
+      <Navbar/>
       <Container customClass="min-height">
         <Routes>
           <Route path="/" element={<Home />} />

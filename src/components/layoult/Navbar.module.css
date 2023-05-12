@@ -1,0 +1,28 @@
+.navbar{
+    /* display: flex; */
+    justify-content: space-between;
+    background-color: #efe011;
+    box-shadow: 1px 1px 10px 2px;
+    
+    padding: .5rem;
+}
+
+.list{
+    /* display: flex; */
+    align-items: center;
+    list-style: none;
+}
+
+.item{
+    margin-right: .5rem;
+}
+
+.item a{
+    color: #333;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: #202020;
+    font-weight: bold;
+}
