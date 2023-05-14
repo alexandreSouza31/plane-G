@@ -1,15 +1,20 @@
 .container {
-   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
-.min-height{min-height: 75vh;}
+.min-height {
+    min-height: 75vh;
+}
 
-.start{justify-content: flex-start;}
+.start {
+    justify-content: flex-start;
+}
 
-.column{flex-direction: column;justify-content: flex-start;}
-
+.column {
+    flex-direction: column;
+    justify-content: flex-start;
+}
