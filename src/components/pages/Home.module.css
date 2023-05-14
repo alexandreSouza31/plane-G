@@ -1,14 +1,27 @@
 .home_container {
     width: 100vw;
-    height: 50vh;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    /* background-image: url("../../img/freedom.jpg"); */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
 }
 
+/* .dialog{
+    bottom: 150px;
+    position: relative;
+    background-color: #000000b8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    border-radius: 10px;
+} */
 .home_container h1{
+    /* color: whitesmoke; */
     font-size: 2.5rem;
     margin-bottom: .5rem;
 }
@@ -20,5 +33,12 @@
 
 .home_container p{
     margin-bottom: 1.5rem;
-    color: grey;
+    /* color: whitesmoke; */
+}
+.home_container img{
+    width: 320px;
+    height: 200px;
+    margin: 2rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
