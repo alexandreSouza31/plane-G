@@ -1,0 +1,24 @@
+.home_container {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.home_container h1{
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.home_container h1 span{
+    color: #efe011;
+    -webkit-text-stroke: .8px #000;
+}
+
+.home_container p{
+    margin-bottom: 1.5rem;
+    color: grey;
+}
