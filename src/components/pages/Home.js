@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
 import img_home from "../../img/freedom.jpg"
+import LinkButton from "../layoult/LinkButton";
 
 function Home() {
     return (
@@ -10,7 +11,7 @@ function Home() {
             </h1>
             <p>Esteja preparado(a) para imprevistos.</p>
             <p>Comece planejar suas viagens agora!</p>
-            <a href="/">Nova viagem</a>
+            <LinkButton to="/newtrip" text="Criar Viagem" />
             <img src={img_home } /></div> 
         </section>
     )
