@@ -10,13 +10,13 @@ function Navbar() {
     return (
         <nav className={styles.navbar}>
             <Container>
-                <div className={styles.container_logo}>
+                <div className={styles.container_navbar}>
                     <h1>Vai viajar?</h1>
                     <Link to="/">
-                        <img src={logo} />
+                        <img className={styles.logo} src={logo} />
                     </Link>
-                </div>
                 <Hamburger/>
+                </div>
             </Container>
         </nav>
     )

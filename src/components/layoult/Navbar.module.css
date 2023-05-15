@@ -1,14 +1,17 @@
 .navbar{
+    display: flex;
     background-color: #efe011;
     box-shadow: 1px 1px 10px 2px;
     padding: .5rem;
 }
 
-.container_logo{
+.container_navbar{
     display: flex;
+    justify-content: space-between;
+    width: 90vw;
     align-items: center;
 }
-
-.container_logo h1{
+.navbar h1{
     font-weight: 700;
+    font-size: 1.2rem;
 }
