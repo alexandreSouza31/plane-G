@@ -1,44 +1,57 @@
 .home_container {
-    width: 100vw;
-    min-height: 400px;
+    width: 90vw;
+    height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
     box-sizing: border-box;
-    /* background-image: url("../../img/freedom.jpg"); */
-    /* background-repeat: no-repeat;
-    background-size: contain; */
 }
 
-/* .dialog{
-    bottom: 150px;
-    position: relative;
-    background-color: #000000b8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-
-    border-radius: 10px;
-} */
 .home_container h1{
-    /* color: whitesmoke; */
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: .5rem;
+    white-space: nowrap;
 }
 
 .home_container h1 span{
     color: #efe011;
-    -webkit-text-stroke: .8px #000;
+    -webkit-text-stroke: .5px #000;
+}
+
+
+.span_despair{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_container img{
+    position: relative;
+    margin: 1rem 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: #b8b8b8 1px solid;
+    z-index: 1;
+}
+
+.span_despair img{
+    width: 190px;
+    height: 170px;
+    margin-left: 20px;
+}
+
+hr{
+    width: 80vw;
 }
 
 .home_container p{
     margin-bottom: 1.5rem;
-    /* color: whitesmoke; */
+    font-weight: bold;
+    font-size: 1.1rem;
 }
-.home_container img{
+.span_freedom img{
     width: 320px;
     height: 200px;
-    margin: 2rem 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
