@@ -7,19 +7,19 @@
 
 .icon{
     position: relative;
-    width: 20px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     z-index: 3;
 }
 
 .hamburger{
     top:50%;
-    left: 50%;
+    /* left: 100%; */
     width: 25px;
     height: 6px;
+    position: relative;
     background-color: #333;
-    position: absolute;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,15 +48,14 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: end;
     position: absolute;
     top: 0%;
-    left: 68%;
-    max-width: 115px;
+    left: 0px;
+    width:20%;
     height: 300px;
     background-color: #202020af;
     box-shadow: 10px 0 69px 0 rgba(0, 0, 0, .59);
-    border-radius: 4px 0px 4px 4px;
+    border-radius: 0px 0px 4px 0px;
     transition: .5s;
     z-index: 2;
 }
@@ -107,12 +106,21 @@
     background-color: #fff;
     transform: rotate(225deg);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, .2);
-    left: -100%;
 }
 .icon.icon_active .hamburger::before{
     top: 0;
     background-color: #fff;
     transform: rotate(135deg);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, .2);
-    left: -100%;
+}
+
+@media only screen and (min-width: 600px) {/*medium devices*/
+    .menu.menu_open{
+       width: 15%;
+    }
+}
+@media only screen and (min-width: 1200px) {/*medium devices*/
+    .menu.menu_open{
+       width: 10%;
+    }
 }
