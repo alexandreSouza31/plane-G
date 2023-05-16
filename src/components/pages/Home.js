@@ -9,16 +9,19 @@ function Home() {
             <h1>
                 Bem-vindo ao <span>Plane-G!</span>
             </h1>
-            <span className={styles.span_despair}>
-                <p>Esteja preparado para imprevistos!</p>
-                <img src={img_accident} />
-            </span>
-            <hr></hr>
-            <span className={styles.span_freedom}>
-                <p>Comece planejar suas viagens agora!</p>
-                <LinkButton to="/newtrip" text="Criar Viagem" />
-                <img src={img_freedom} />
-            </span>
+            <div>
+                <span className={styles.span_despair}>
+                    <p>Esteja preparado para imprevistos!</p>
+                    <img src={img_accident} />
+                </span>
+                <hr></hr>
+                <span className={styles.span_freedom}>
+                    <p>Comece planejar suas viagens agora!</p>
+                    <LinkButton to="/newtrip" text="Criar Viagem" />
+                    <img src={img_freedom} />
+                </span>
+            </div>
+
         </section>
     )
 }

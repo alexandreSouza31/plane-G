@@ -11,11 +11,11 @@ function Navbar() {
         <nav className={styles.navbar}>
             <Container>
                 <div className={styles.container_navbar}>
+                <Hamburger/>
                     <h1>Vai viajar?</h1>
                     <Link to="/">
                         <img className={styles.logo} src={logo} />
                     </Link>
-                <Hamburger/>
                 </div>
             </Container>
         </nav>
