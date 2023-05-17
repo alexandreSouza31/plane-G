@@ -1,0 +1,9 @@
+.select_container{
+    display: flex;
+    flex-direction: column;
+}
+select{
+    font-size: 1rem;
+    padding: .5rem;
+    width: 280px;
+}
