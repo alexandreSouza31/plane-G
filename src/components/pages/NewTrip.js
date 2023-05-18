@@ -20,7 +20,7 @@ function NewTrip() {
         }).then((resp) => resp.json())
         .then((data) => {
             console.log(data)
-            navigate('/trips', {message : "Viagem criado com sucesso!"});
+            navigate('/trips', {state:{message : "Viagem criada com sucesso!"}});
           })  
         .catch(err=>console.log(err))
     }

@@ -66,6 +66,39 @@
       "planeG": 0,
       "services": [],
       "id": 8
+    },
+    {
+      "name": "Penedo",
+      "budget": "1500",
+      "category": {
+        "id": "1",
+        "name": "Lazer"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 9
+    },
+    {
+      "name": "palmas",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Trabalho"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 10
+    },
+    {
+      "name": "viagem teste",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Trabalho"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 11
     }
   ],
   "categories": [
