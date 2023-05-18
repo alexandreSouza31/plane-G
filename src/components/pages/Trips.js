@@ -1,5 +1,9 @@
 function Trips() {
-    return <h1>Viagens</h1>
+    return (
+        <div>
+            <h1>Minhas Viagens</h1>
+        </div>
+    )
 }
 
 export default Trips
