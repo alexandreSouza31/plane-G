@@ -1,0 +1,14 @@
+.trip_container{
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.title_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.title_container h1{
+    font-size: 1.5rem;
+}
