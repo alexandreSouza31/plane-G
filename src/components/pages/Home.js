@@ -17,7 +17,7 @@ function Home() {
                 <hr></hr>
                 <span className={styles.span_freedom}>
                     <p>Comece planejar suas viagens agora!</p>
-                    <LinkButton to="/newtrip" text="Criar Viagem" />
+                    <LinkButton to="/newtrip" text="Nova Viagem" />
                     <img src={img_freedom} />
                 </span>
             </div>
