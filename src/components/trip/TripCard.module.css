@@ -46,14 +46,41 @@
     background-color: #999;
 }
 
-.category_text .lazer{
-    background-color: rgba(252, 30, 185, 0.365);
+.category_text .lazer{background-color: rgba(252, 30, 185, 0.365);}
+
+.category_text .trabalho{background-color: rgba(47, 168, 255, 0.365);}
+
+.category_text .outros{background-color: rgba(24, 248, 155, 0.365);}
+
+.trip_card_actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.2rem auto;
 }
 
-.category_text .trabalho{
-     background-color: rgba(47, 168, 255, 0.365);   
+.trip_card_actions a,
+.trip_card_actions button{
+    text-decoration: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    border:1px solid whitesmoke;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #222;
+    font-size: .9rem;
+    padding: .6rem 1rem;
+    margin-right: 1rem;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.category_text .outros{
-    background-color: rgba(24, 248, 155, 0.365);
+.trip_card_actions a:hover,.trip_card_actions button:hover{
+    color:#efe011;
+    background-color: #333;
 }
