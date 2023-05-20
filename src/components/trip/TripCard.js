@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BsPencil,BsFillTrashFill } from "react-icons/bs";
 
 import styles from "./TripCard.module.css";
@@ -13,9 +14,13 @@ const TripCard = ({id,name,budget,category,handleRemove}) => {
                 {/* mesmo se as letras vierem maiúsculas ele deixa minúsculas pra funcionar */}
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
-            <div>
-                <p>editar</p>
-                <p>remover</p>
+            <div className={styles.trip_card_actions}>
+                <Link to="/">
+                    <BsPencil/> Editar
+                </Link>
+                <button>
+                    <BsFillTrashFill/> Excluir
+                </button>
             </div>
         </div>
     )
