@@ -9,12 +9,12 @@
     border: 1px solid whitesmoke;
     padding: 1rem;
     border-radius: 4px;
-    margin: .5rem auto;
+    margin: .5rem auto;    
 }
 
 .card_container h4{
-    background-color: #efe011;
-    color: #333;
+    color: #efe011;
+    background-color: #333;
     border: 1px solid #333;
     border-radius: 4px;
     padding: .5rem;
