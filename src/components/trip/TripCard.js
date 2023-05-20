@@ -10,7 +10,8 @@ const TripCard = ({id,name,budget,category,handleRemove}) => {
                 <span>Orçamento: </span> R${budget}
             </p>
             <p className={styles.category_text}>
-                <span></span> {category}
+                {/* mesmo se as letras vierem maiúsculas ele deixa minúsculas pra funcionar */}
+                <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div>
                 <p>editar</p>
