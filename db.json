@@ -1,104 +1,15 @@
 {
   "trips": [
     {
-      "name": "rio",
+      "name": "Rio",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Trabalho"
+      },
       "planeG": 0,
       "services": [],
       "id": 1
-    },
-    {
-      "name": "Alexandre Mariano de Souza junior",
-      "budget": "3333",
-      "planeG": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "Rio",
-      "budget": "2000",
-      "planeG": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "Paris",
-      "budget": "20000",
-      "planeG": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "Mauá",
-      "budget": "1500",
-      "category": {
-        "id": "1",
-        "name": "Lazer"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "Costa do Sauípe",
-      "budget": "14000",
-      "category": {
-        "id": "2",
-        "name": "Trabalho"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 6
-    },
-    {
-      "name": "Caldas",
-      "budget": "2000",
-      "planeG": 0,
-      "services": [],
-      "id": 7
-    },
-    {
-      "category": {
-        "id": "3",
-        "name": "Outros"
-      },
-      "name": "outro teste",
-      "budget": "10000",
-      "planeG": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "Penedo",
-      "budget": "1500",
-      "category": {
-        "id": "1",
-        "name": "Lazer"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "name": "palmas",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Trabalho"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 10
-    },
-    {
-      "name": "viagem teste",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Trabalho"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 11
     }
   ],
   "categories": [
