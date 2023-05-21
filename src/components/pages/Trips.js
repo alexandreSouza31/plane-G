@@ -7,9 +7,11 @@ import LinkButton from "../layoult/LinkButton";
 import TripCard from "../trip/TripCard";
 
 import styles from "./Trips.module.css";
+import Loading from "../layoult/Loading";
 
 function Trips() {
     const [trips, setTrips] = useState([]) //criar um state pra salvar os projetos
+    const [removeLoading,setRemoveLoading]=useState(false)//como vai aparecer e sumir preciso trabalhar com o state
 
     const location = useLocation()//hook pra resgatar a msg
     let message = "";
@@ -18,7 +20,8 @@ function Trips() {
     }
 
     useEffect(() => {
-        fetch("http://localhost:5000/trips", {
+        setTimeout(() => {
+            fetch("http://localhost:5000/trips", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,8 +29,10 @@ function Trips() {
         }).then(resp => resp.json())
             .then(data => {
                 setTrips(data)//setar as viagens por meio da API
+                setRemoveLoading(true)//recebe true pra sumir
             })
             .catch(err => console.log(err))
+        }, 2000);
 
     }, [])
 
@@ -51,6 +56,7 @@ function Trips() {
                         key={trip.id}
                     />
                     ))}
+                {!removeLoading && <Loading/>}
             </Container>
         </div>
     )
