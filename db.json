@@ -32,17 +32,6 @@
       "planeG": 0,
       "services": [],
       "id": 3
-    },
-    {
-      "name": "rio2",
-      "budget": "222",
-      "category": {
-        "id": "1",
-        "name": "Lazer"
-      },
-      "planeG": 0,
-      "services": [],
-      "id": 7
     }
   ],
   "categories": [

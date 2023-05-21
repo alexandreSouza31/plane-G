@@ -12,6 +12,7 @@ import Loading from "../layoult/Loading";
 function Trips() {
     const [trips, setTrips] = useState([]) //criar um state pra salvar os projetos
     const [removeLoading, setRemoveLoading] = useState(false)//como vai aparecer e sumir preciso trabalhar com o state
+    const [tripMessage, setTripMessage] = useState("");//mensagem vem vazia no início
 
     const location = useLocation()//hook pra resgatar a msg
     let message = "";
@@ -44,8 +45,9 @@ function Trips() {
                 "Content-type": "application/json"
             },
         }).then(resp => resp.json())
-            .then(data => {
+            .then(() => {
                 setTrips(trips.filter((trip) => trip.id !== id))
+                setTripMessage("Viagem excluída com sucesso!")//preencho quando a requsição é finalizada
             })
             .catch(err => console.log(err))
     }
@@ -57,6 +59,8 @@ function Trips() {
                 <LinkButton to="/newtrip" text="Nova Viagem" />
             </div>
             {message && <Message type="success" msg={message} />}
+            {/*para exibir: */}
+            {tripMessage && <Message type="success" msg={tripMessage} />}
             {/* aqui sempre será sucesso. 
             obs: o texto da mensagem está sendo passado no arq NewTrip*/}
 
