@@ -10,6 +10,39 @@
       "planeG": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "Paris",
+      "budget": "20000",
+      "category": {
+        "id": "1",
+        "name": "Lazer"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Maceió",
+      "budget": "5000",
+      "category": {
+        "id": "3",
+        "name": "Outros"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "rio2",
+      "budget": "222",
+      "category": {
+        "id": "1",
+        "name": "Lazer"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 7
     }
   ],
   "categories": [

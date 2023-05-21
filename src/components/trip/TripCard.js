@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
-import { BsPencil,BsFillTrashFill } from "react-icons/bs";
+import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 
 import styles from "./TripCard.module.css";
 
-const TripCard = ({id,name,budget,category,handleRemove}) => {
+const TripCard = ({ id, name, budget, category, handleRemove }) => {
+
+    const remove = (e) => {
+        //e.preventDefault();
+        handleRemove(id)
+    }
     return (
         <div className={styles.card_container}>
             <h4>{name}</h4>
@@ -16,10 +21,12 @@ const TripCard = ({id,name,budget,category,handleRemove}) => {
             </p>
             <div className={styles.trip_card_actions}>
                 <Link to="/">
-                    <BsPencil/> Editar
+                    <BsPencil /> Editar
                 </Link>
-                <button>
-                    <BsFillTrashFill/> Excluir
+                <button onClick={() => {
+                    if (window.confirm('Tem certeza que deseja excluir essa viagem?'))remove()
+                }}>
+                    <BsFillTrashFill /> Excluir
                 </button>
             </div>
         </div>
