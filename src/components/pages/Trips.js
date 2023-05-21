@@ -56,7 +56,10 @@ function Trips() {
                         key={trip.id}
                     />
                     ))}
-                {!removeLoading && <Loading/>}
+                {!removeLoading && <Loading />}
+                {removeLoading && trips.length === 0 && (
+                    <p>Não há viagens cadastradas!</p>
+                )}
             </Container>
         </div>
     )
