@@ -1,7 +1,8 @@
 # Plane-G!
 
-It is a travel planner, where it is possible to enter various expenses.
+It's a travel planner where you can manage various expenses.
 (in progress...)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -90,11 +91,8 @@ Mobile first, clean code, refactoring, ReactJS.
 ### How to run the code? 
 
 
-you can download it to your machine, open the code editor terminal, go into the root folder of the project and type npm start. Wait for the terminal to complete and it will automatically open an address like 'localhost:3000/' or equivalent in your browser.
+you can download it to your machine, open the code editor terminal, go into the root folder of the project and type 'npm run backend', to run the fake database. Open another terminal (click the + sign in the terminal) and type npm start. Wait for the terminal to complete and it will automatically open an address like 'localhost:3000/' or equivalent in your browser. 
 
-
-If you want to test the app without downloading the code:
-- [Vercel](https://plane-g.vercel.app/)
 
  :)
 
