@@ -1,4 +1,4 @@
-.card_container{
+.card_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,10 +9,16 @@
     border: 1px solid whitesmoke;
     padding: 1rem;
     border-radius: 4px;
-    margin: .5rem auto;    
+    margin: .5rem auto;
 }
 
-.card_container h4{
+.h4_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.h4_container h4 {
     color: #efe011;
     background-color: #333;
     border: 1px solid #333;
@@ -21,23 +27,24 @@
     margin-bottom: 1rem;
     font-size: 1.3rem;
     text-align: center;
+    width: 100%;
 }
 
-.card_container p{
+.card_container p {
     color: #7a7a7a;
     margin-bottom: 1rem;
 }
 
-.card_container p span{
+.card_container p span {
     font-weight: bold;
 }
 
-.category_text{
+.category_text {
     display: flex;
     align-items: center;
 }
 
-.category_text span{
+.category_text span {
     display: block;
     width: 12px;
     height: 12px;
@@ -46,29 +53,35 @@
     background-color: #999;
 }
 
-.category_text .lazer{background-color: rgba(252, 30, 185, 0.365);}
+.category_text .lazer {
+    background-color: rgba(252, 30, 185, 0.365);
+}
 
-.category_text .trabalho{background-color: rgba(47, 168, 255, 0.365);}
+.category_text .trabalho {
+    background-color: rgba(47, 168, 255, 0.365);
+}
 
-.category_text .outros{background-color: rgba(24, 248, 155, 0.365);}
+.category_text .outros {
+    background-color: rgba(24, 248, 155, 0.365);
+}
 
-.trip_card_actions{
+.trip_card_actions {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
-    margin: 1.2rem auto;
+    width: 100%;
 }
 
 .trip_card_actions a,
-.trip_card_actions button{
+.trip_card_actions button {
     text-decoration: none;
     border: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 8rem;
-    border:1px solid whitesmoke;
+    border: 1px solid whitesmoke;
     border-radius: 4px;
     background-color: transparent;
     color: #222;
@@ -80,7 +93,8 @@
     transition: .3s;
 }
 
-.trip_card_actions a:hover,.trip_card_actions button:hover{
-    color:#efe011;
+.trip_card_actions a:hover,
+.trip_card_actions button:hover {
+    color: #efe011;
     background-color: #333;
 }

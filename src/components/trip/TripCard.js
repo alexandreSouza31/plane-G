@@ -11,7 +11,10 @@ const TripCard = ({ id, name, budget, category, handleRemove }) => {
     }
     return (
         <div className={styles.card_container}>
-            <h4>{name}</h4>
+            <div className={styles.h4_container}>
+                <h4>{name}</h4>
+
+            </div>
             <p>
                 <span>Orçamento: </span> R${budget}
             </p>
@@ -24,7 +27,7 @@ const TripCard = ({ id, name, budget, category, handleRemove }) => {
                     <BsPencil /> Editar
                 </Link>
                 <button onClick={() => {
-                    if (window.confirm('Tem certeza que deseja excluir essa viagem?'))remove()
+                    if (window.confirm('Tem certeza que deseja excluir essa viagem?')) remove()
                 }}>
                     <BsFillTrashFill /> Excluir
                 </button>
