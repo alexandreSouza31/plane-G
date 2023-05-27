@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Container from "./Container";
 import styles from "./Navbar.module.css"
-import logo from "../../img/logo.png";
-//import { useState } from "react";
+import Logo from "../../img/logo.png";
 import Hamburger from "./Hamburger";
 
 function Navbar() {
@@ -14,7 +13,7 @@ function Navbar() {
                 <Hamburger/>
                     <h1>Vai viajar?</h1>
                     <Link to="/">
-                        <img className={styles.logo} src={logo} />
+                        <img className={styles.logo} src={Logo} alt="logo" />
                     </Link>
                 </div>
             </Container>
