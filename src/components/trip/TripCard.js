@@ -13,7 +13,6 @@ const TripCard = ({ id, name, budget, category, handleRemove }) => {
         <div className={styles.card_container}>
             <div className={styles.h4_container}>
                 <h4>{name}</h4>
-
             </div>
             <p>
                 <span>Orçamento: </span> R${budget}
@@ -23,7 +22,7 @@ const TripCard = ({ id, name, budget, category, handleRemove }) => {
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div className={styles.trip_card_actions}>
-                <Link to="/">
+                <Link to={`/trip/${id}`}>
                     <BsPencil /> Editar
                 </Link>
                 <button onClick={() => {

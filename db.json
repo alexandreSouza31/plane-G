@@ -32,6 +32,17 @@
       "planeG": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "São Paulo",
+      "budget": "3000",
+      "category": {
+        "id": "2",
+        "name": "Trabalho"
+      },
+      "planeG": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [

@@ -10,6 +10,7 @@ import Footer from "./components/layoult/Footer";
 
 import Container from "./components/layoult/Container";
 import Trips from "./components/pages/Trips";
+import { Trip } from "./components/pages/Trip";
 
 function App() {
   return (
@@ -17,14 +18,16 @@ function App() {
       <Navbar />
       <Container customClass="min-height">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/trips" element={<Trips />} />
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/newtrip" element={<NewTrip />} />
+          <Route path="/trip/:id" element={<Trip />} />
+          {/* o param após o /trip/, que no caso é p id, dirá que viagem eu estou mexendo */}
         </Routes>
       </Container >
-        <Footer />
+      <Footer />
     </BrowserRouter>
   );
 }
