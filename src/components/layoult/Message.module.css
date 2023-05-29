@@ -1,5 +1,7 @@
 .message{
+    position: relative;
     width: 100%;
+    top:10vh; 
     padding: 1rem;
     border: 1px solid black;
     margin: 0 auto;

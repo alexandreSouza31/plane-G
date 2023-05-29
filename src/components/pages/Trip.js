@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../layoult/Loading";
 import Container from "../layoult/Container";
 import TripForm from "../trip/TripForm"
+import Message from "../layoult/Message"
 
 import styles from "./Trip.module.css";
 
@@ -12,6 +13,8 @@ export const Trip = () => {
     const { id } = useParams()
     const [trip, setTrip] = useState([])
     const [showTripForm, setShowTripForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
+    const [message, setMessage] = useState()//altero o texto da mensagem
+    const [type, setType] = useState()//altero o tipo da mensagem
 
     useEffect(() => {
         setTimeout(() => {
@@ -26,29 +29,35 @@ export const Trip = () => {
                     setTrip(data)
                 })
                 .catch((err) => console.log(err))
-            
-            
-        }, 3000);
+
+
+        }, 2000);
     }, [id])
 
     function editPost(trip) {
         if (trip.budget < trip.cost) {
-            //msg
+            setMessage("O orçamento não pode ser menor  que o custo do projeto!")
+            setType("error");
+            return false;
         }
-        console.log(trip)
+
         fetch(`http://localhost:5000/trips/${trip.id}`, {
             method: "PATCH",
             headers: {
-                "Content-type":"application/json"
+                "Content-type": "application/json"
             },
-            body:JSON.stringify(trip)//mandando o projeto como texto
+            body: JSON.stringify(trip)//mandando o projeto como texto
         })
             .then(resp => resp.json())
             .then((data) => {
                 setTrip(data)//altero a viagem com os dados que vieram atualizados
                 setShowTripForm(false)//esconder o formulário quando termina a edição.
+                setMessage(`A viagem para ${trip.name} foi editada com sucesso!`)
+                setType("success");
             })
-        .catch(err=>console.error(err))
+            .catch(err => console.error(err))
+        
+        setMessage()
     }
 
     function toggleTripForm() {//função somente para alterar o estado.
@@ -60,6 +69,7 @@ export const Trip = () => {
             <div className={styles.div_details}>
                 <Container customClass="column">
                     <div className={styles.container_details}>
+                        {message && <Message type={type} msg={message} />}
                         <h1>Viagem: {trip.name}</h1>
                         <button className={styles.btn} onClick={toggleTripForm}>
                             {!showTripForm ? 'Editar' : 'Fechar'}
@@ -79,11 +89,11 @@ export const Trip = () => {
                             </div>
                         ) : (//se for ver detalhes
                             <div className={styles.div_info}>
-                                    <TripForm
-                                        handleSubmit={editPost}
-                                        btnText="Salvar"
-                                        tripData={trip}
-                                    />
+                                <TripForm
+                                    handleSubmit={editPost}
+                                    btnText="Salvar"
+                                    tripData={trip}
+                                />
                             </div>
                         )}
                     </div>

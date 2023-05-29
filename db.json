@@ -2,7 +2,7 @@
   "trips": [
     {
       "name": "Rio de Janeiro",
-      "budget": "10000",
+      "budget": "10500",
       "category": {
         "id": "1",
         "name": "Lazer"
@@ -43,6 +43,17 @@
       "cost": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "Palmas",
+      "budget": "2500",
+      "category": {
+        "id": "1",
+        "name": "Lazer"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [
