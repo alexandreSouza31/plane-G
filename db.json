@@ -7,7 +7,7 @@
         "id": "2",
         "name": "Trabalho"
       },
-      "planeG": 0,
+      "cost": 0,
       "services": [],
       "id": 1
     },
@@ -18,7 +18,7 @@
         "id": "1",
         "name": "Lazer"
       },
-      "planeG": 0,
+      "cost": 0,
       "services": [],
       "id": 2
     },
@@ -29,7 +29,7 @@
         "id": "3",
         "name": "Outros"
       },
-      "planeG": 0,
+      "cost": 0,
       "services": [],
       "id": 3
     },
@@ -40,7 +40,7 @@
         "id": "2",
         "name": "Trabalho"
       },
-      "planeG": 0,
+      "cost": 0,
       "services": [],
       "id": 4
     }
