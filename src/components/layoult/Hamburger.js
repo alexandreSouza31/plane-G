@@ -18,19 +18,19 @@ function Hamburger() {
                     <ul className={styles.list_itens}>
 
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/">Home</Link>
+                            <Link to="/" onClick={ToggleMod}>Home</Link>
                         </li>
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/trips">Viagens</Link>
+                            <Link to="/trips" onClick={ToggleMod}>Viagens</Link>
                         </li>
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/newtrip">Nova Viagem</Link>
+                            <Link to="/newtrip" onClick={ToggleMod}>Nova Viagem</Link>
                         </li>
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/company">Empresa</Link>
+                            <Link to="/company" onClick={ToggleMod}>Empresa</Link>
                         </li>
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/contact">Contato</Link>
+                            <Link to="/contact" onClick={ToggleMod}>Contato</Link>
                         </li>
 
                     </ul>
