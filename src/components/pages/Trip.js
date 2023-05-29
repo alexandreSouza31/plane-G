@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import {TfiLocationPin} from "react-icons/tfi"
 
 import Loading from "../layoult/Loading";
 import Container from "../layoult/Container";
@@ -70,7 +71,7 @@ export const Trip = () => {
                 <Container customClass="column">
                     <div className={styles.container_details}>
                         {message && <Message type={type} msg={message} />}
-                        <h1>Viagem: {trip.name}</h1>
+                        <h1>Viagem: {trip.name} <TfiLocationPin/></h1>
                         <button className={styles.btn} onClick={toggleTripForm}>
                             {!showTripForm ? 'Editar' : 'Fechar'}
                         </button>
