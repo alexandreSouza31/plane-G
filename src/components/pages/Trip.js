@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+import Loading from "../layoult/Loading";
 
 export const Trip = () => {
 
@@ -7,20 +9,26 @@ export const Trip = () => {
     const [trip, setTrip] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/trips/${id}`, {
-            method: "GET",
-            headers: {
-                "Content-type": "application/json",
-            },
-        })   
-            .then((resp) => resp.json())
-            .then((data) => {
-                setTrip(data)
+        setTimeout(() => {
+            fetch(`http://localhost:5000/trips/${id}`, {
+                method: "GET",
+                headers: {
+                    "Content-type": "application/json",
+                },
             })
-        .catch((err)=>console.log(err))
-    },[id])
+                .then((resp) => resp.json())
+                .then((data) => {
+                    setTrip(data)
+                })
+                .catch((err) => console.log(err))
+        }, 3000);
+    }, [id])
 
-    return (
-        <p>{trip.name}</p>
-    )
+    return (<>
+        {trip.name ? (
+            <p>{trip.name}</p>
+        ) : (
+            <Loading />
+        )}
+    </>)
 }
