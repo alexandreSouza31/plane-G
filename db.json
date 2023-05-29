@@ -1,11 +1,11 @@
 {
   "trips": [
     {
-      "name": "Rio",
+      "name": "Rio de Janeiro",
       "budget": "10000",
       "category": {
-        "id": "2",
-        "name": "Trabalho"
+        "id": "1",
+        "name": "Lazer"
       },
       "cost": 0,
       "services": [],

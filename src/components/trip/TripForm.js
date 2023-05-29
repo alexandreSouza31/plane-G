@@ -4,24 +4,24 @@ import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 import { useEffect, useState } from "react";
 
-function TripForm({ handleSubmit,btnText, tripData }) {//btnText vem lá do componente pai, o newTrip
+function TripForm({ handleSubmit, btnText, tripData }) {//btnText vem lá do componente pai, o newTrip
     const [categories, setCategories] = useState([])
-    const [trip, setTrip]=useState(tripData || {})
-    
+    const [trip, setTrip] = useState(tripData || {})
+
     useEffect(() => {
         //vou precisar fazer um request:
-    fetch("http://localhost:5000/categories", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        }
-    })
-        .then((resp) => resp.json())//retorna o json
-        .then((data) => {
-            setCategories(data)//reaproveita o dado do json e coloca no hook categories
+        fetch("http://localhost:5000/categories", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
         })
-        .catch((err) => console.log(err))//retorna o erro
-    },[])//valor inicial: options vazias
+            .then((resp) => resp.json())//retorna o json
+            .then((data) => {
+                setCategories(data)//reaproveita o dado do json e coloca no hook categories
+            })
+            .catch((err) => console.log(err))//retorna o erro
+    }, [])//valor inicial: options vazias
 
     const submit = (e) => {
         e.preventDefault()
@@ -36,7 +36,7 @@ function TripForm({ handleSubmit,btnText, tripData }) {//btnText vem lá do comp
         setTrip({
             ...trip, category: {
                 id: e.target.value,
-                name:e.target.options[e.target.selectedIndex].text//com isso consigo acessar qual opção selecionada pelo index a partir do option.
+                name: e.target.options[e.target.selectedIndex].text//com isso consigo acessar qual opção selecionada pelo index a partir do option.
             }
         })
     }
@@ -49,7 +49,7 @@ function TripForm({ handleSubmit,btnText, tripData }) {//btnText vem lá do comp
                 name="name"
                 placeholder="ex: Rio 2024"
                 handleOnChange={handleChange}
-                value={trip.name ? trip.name:""}
+                value={trip.name ? trip.name : ""}
             />
             <Input
                 type="number"
@@ -57,14 +57,14 @@ function TripForm({ handleSubmit,btnText, tripData }) {//btnText vem lá do comp
                 name="budget"
                 placeholder="ex: 5000"
                 handleOnChange={handleChange}
-                value={trip.budget ? trip.budget :""}
+                value={trip.budget ? trip.budget : ""}
             />
             <Select
                 name="category_id"
                 text="Selecione a categoria:"
                 options={categories}
                 handleOnChange={handleCategory}
-                value={trip.category ? trip.category.id:""}
+                value={trip.category ? trip.category.id : ""}
             />
             <SubmitButton text={btnText} />
         </form>
