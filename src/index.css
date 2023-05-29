@@ -9,3 +9,5 @@ html, body,#root{
   background-color: #cfcfcf;
   height: 100%;
 }
+
+button{cursor: pointer;}

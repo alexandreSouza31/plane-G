@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 
 import Loading from "../layoult/Loading";
 import Container from "../layoult/Container"
+
+import styles from "./Trip.module.css"
+
 export const Trip = () => {
 
     const { id } = useParams()
@@ -32,29 +35,28 @@ export const Trip = () => {
 
     return (<>
         {trip.name ? (
-            <div>
+            <div className={styles.div_details}>
                 <Container customClass="column">
-                    <div>
-
+                    <div className={styles.container_details}>
                         <h1>Viagem: {trip.name}</h1>
-                        <button onClick={toggleTripForm}>
+                        <button className={styles.btn} onClick={toggleTripForm}>
                             {!showTripForm ? 'Editar' : 'Fechar'}
                         </button>
 
                         {!showTripForm ? (//se for editar...
-                            <div>
+                            <div className={styles.div_info}>
                                 <p>
                                     <span>Categoria: </span>{trip.category.name }
                                 </p>
                                 <p>
-                                    <span>Orçamento Total: </span>{trip.budget }
+                                    <span>Orçamento Total: </span>R$ {trip.budget }
                                 </p>
                                 <p>
-                                    <span>Total Utilizado: </span>{trip.cost }
+                                    <span>Total Utilizado: </span>R$ {trip.cost }
                                 </p>
                             </div>
                         ) : (//se for ver detalhes
-                            <div>
+                            <div className={styles.div_info}>
                                 <p>Detalhes da viagem</p>
                             </div>
                         )}
