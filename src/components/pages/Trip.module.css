@@ -12,6 +12,8 @@
 .container_details span{font-weight: bold;}
 
 .container_details h1{
+    display: flex;
+    align-items: center;
     color: #efe011;
     background-color: #333;
     padding: .5rem;
@@ -23,14 +25,13 @@
     border-bottom: 1px solid #7a7a7a;
     margin-bottom: 1.2rem;
     padding-bottom: 1.2rem;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .btn {
     background-color: #333;
     color: whitesmoke;
     padding: .5rem 1rem;
+    margin: 1rem 0;
     text-decoration: none;
     transition: .5s;
     border-radius: 4px;
