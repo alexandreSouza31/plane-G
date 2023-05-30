@@ -102,7 +102,7 @@ export const Trip = () => {
             .then(resp => resp.json())
             .then((data) => {
                 setTrip(data)
-                setShowTripForm(false)
+                setShowExpenseForm(!setShowExpenseForm)
                 setMessage(`A despesa foi adicionada com sucesso!`)
                 setType("success");
             })

@@ -24,6 +24,24 @@
         {
           "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssddddddddddddddddddddddddd",
           "id": "cd44dc78-a5d6-41e4-8cdf-d3a9841ff2b5"
+        },
+        {
+          "name": "qq coisa",
+          "cost": "200",
+          "description": "isso",
+          "id": "de5943e4-87a4-43aa-a5f4-b8300012904e"
+        },
+        {
+          "name": "qq coisa",
+          "cost": "200",
+          "description": "isso",
+          "id": "b98d1802-11a0-486f-9a86-180ee285af00"
+        },
+        {
+          "name": "qq coisa",
+          "cost": "200",
+          "description": "isso",
+          "id": "9de657c2-be15-4501-ba5c-efa3772ffc06"
         }
       ],
       "id": 1
@@ -35,7 +53,7 @@
         "id": "1",
         "name": "Lazer"
       },
-      "cost": 11000,
+      "cost": 17107,
       "expenses": [
         {
           "name": "comida",
@@ -48,6 +66,36 @@
           "cost": "8000",
           "description": "Hote; 3 estrelas",
           "id": "50aa11bd-c7d4-4d3a-8c67-e90af0e3a029"
+        },
+        {
+          "name": "qq coisa",
+          "cost": "200",
+          "description": "isso",
+          "id": "da431d73-7586-49b3-b738-16500f1f64de"
+        },
+        {
+          "name": "qq coisa2",
+          "cost": "202",
+          "description": "isso",
+          "id": "83110c71-e037-48a4-a823-6f4a830bd28a"
+        },
+        {
+          "name": "qq coisa 3",
+          "cost": "205",
+          "description": "isso",
+          "id": "39fa2e8a-4b4f-4f8a-bd05-076ea21549f7"
+        },
+        {
+          "name": "qqqq5",
+          "cost": "5000",
+          "description": "asss",
+          "id": "094da074-d265-4ea7-9a6d-1f269c22864c"
+        },
+        {
+          "name": "qqqq6",
+          "cost": "500",
+          "description": "asss",
+          "id": "eb602c11-a947-46c5-a60f-dfec74ce43b3"
         }
       ],
       "id": 2
