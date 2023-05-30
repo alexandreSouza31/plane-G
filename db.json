@@ -7,8 +7,25 @@
         "id": "1",
         "name": "Lazer"
       },
-      "cost": 0,
-      "expenses": [],
+      "cost": null,
+      "expenses": [
+        {
+          "name": "Chalé",
+          "cost": "498",
+          "description": "2 diárias",
+          "id": "56db94da-6aff-4fb6-b83f-00dde425a797"
+        },
+        {
+          "name": "passeio",
+          "cost": "300",
+          "description": "fabrica de chocolate e coisa e tal, e pa e dekcdcdcdsvccvfcsdfcsdfcdscfvcfvfccf",
+          "id": "0e8b1677-5b79-4bac-bc06-d30c6309793b"
+        },
+        {
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssddddddddddddddddddddddddd",
+          "id": "cd44dc78-a5d6-41e4-8cdf-d3a9841ff2b5"
+        }
+      ],
       "id": 1
     },
     {
@@ -18,8 +35,21 @@
         "id": "1",
         "name": "Lazer"
       },
-      "cost": 0,
-      "expenses": [],
+      "cost": 11000,
+      "expenses": [
+        {
+          "name": "comida",
+          "cost": "3000",
+          "description": "restaurantes",
+          "id": "9f0ed882-df28-491a-a68d-ca5483cc777b"
+        },
+        {
+          "name": "hotel",
+          "cost": "8000",
+          "description": "Hote; 3 estrelas",
+          "id": "50aa11bd-c7d4-4d3a-8c67-e90af0e3a029"
+        }
+      ],
       "id": 2
     },
     {
