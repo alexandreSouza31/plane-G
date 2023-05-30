@@ -71,16 +71,18 @@
     background-color: rgba(24, 248, 155, 0.365);
 }
 
-.description_expense{
+.description_expense {
     max-height: 80px;
-    overflow-y: scroll;
-    margin: 1rem 0;
+    width: 200px;
+    overflow: scroll;
+    word-break: break-all;
+    margin: 1rem auto;
     padding: .5rem;
     border: whitesmoke solid 1px;
     border-radius: 4px;
 }
 
-.card_container_expense .trip_card_actions button{
+.card_container_expense .trip_card_actions button {
     border-color: #222;
 }
 
@@ -117,4 +119,10 @@
 .trip_card_actions button:hover {
     color: #efe011;
     background-color: #333;
+}
+
+@media screen and (min-width:1100px) {
+    .card_container {
+        max-width: 25vw;
+    }
 }
