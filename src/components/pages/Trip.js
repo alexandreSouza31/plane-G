@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {TfiLocationPin} from "react-icons/tfi"
+import { TfiLocationPin } from "react-icons/tfi"
 
 import Loading from "../layoult/Loading";
 import Container from "../layoult/Container";
@@ -14,6 +14,7 @@ export const Trip = () => {
     const { id } = useParams()
     const [trip, setTrip] = useState([])
     const [showTripForm, setShowTripForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
+    const [showExpenseForm, setShowExpenseForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
     const [message, setMessage] = useState()//altero o texto da mensagem
     const [type, setType] = useState()//altero o tipo da mensagem
 
@@ -57,21 +58,24 @@ export const Trip = () => {
                 setType("success");
             })
             .catch(err => console.error(err))
-        
+
         setMessage()
     }
 
     function toggleTripForm() {//função somente para alterar o estado.
-        setShowTripForm(!showTripForm)
+        setShowTripForm(!showTripForm);
     }
 
+    function toggleExpenseForm() {
+        setShowExpenseForm(!showExpenseForm);
+    }
     return (<>
         {trip.name ? (
             <div className={styles.div_details}>
                 <Container customClass="column">
                     <div className={styles.container_details}>
                         {message && <Message type={type} msg={message} />}
-                        <h1>Viagem: {trip.name} <TfiLocationPin/></h1>
+                        <h1>Viagem: {trip.name} <TfiLocationPin /></h1>
                         <button className={styles.btn} onClick={toggleTripForm}>
                             {!showTripForm ? 'Editar' : 'Fechar'}
                         </button>
@@ -98,6 +102,21 @@ export const Trip = () => {
                             </div>
                         )}
                     </div>
+
+                    <div className={styles.container_expense}>
+
+                        <h2>Adicione um gasto</h2>
+                        <button className={styles.btn} onClick={toggleExpenseForm}>
+                            {!showExpenseForm ? 'Adicionar' : 'Fechar'}
+                        </button>
+                        <div className={styles.div_info}>
+                            {showExpenseForm && <div>formulário da despesa</div>}
+                        </div>
+                    </div>
+                    <h2>Despesas</h2>
+                    <Container customClass="start">
+                        <p>Itens de despesas</p>
+                    </Container>
                 </Container>
 
             </div>

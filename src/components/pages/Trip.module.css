@@ -21,7 +21,7 @@
     border-radius: 4px;
 }
 
-.container_details,.container_service{
+.container_details,.container_expense{
     display: flex;
     justify-content: space-between;
     align-items:first baseline;
@@ -31,7 +31,7 @@
     padding-bottom: 1.2rem;
 }
 
-.container_service{
+.container_expense{
     width: 90vw;
 
 }
