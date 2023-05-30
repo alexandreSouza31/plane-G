@@ -29,3 +29,9 @@
     color:#efe011;
     font-weight: bold;
 }
+
+@media screen and (min-height:700px) {
+    .footer {
+        height: 212px;
+    }
+}
