@@ -9,6 +9,7 @@ import Container from "../layoult/Container";
 import TripForm from "../trip/TripForm";
 import Message from "../layoult/Message";
 import ExpensesForm from "../expenses/ExpensesForm";
+import ExpenseCard from "../expenses/ExpenseCard";
 
 import styles from "./Trip.module.css";
 
@@ -16,6 +17,7 @@ export const Trip = () => {
 
     const { id } = useParams()
     const [trip, setTrip] = useState([])
+    const [expenses, setExpenses] = useState([])
     const [showTripForm, setShowTripForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
     const [showExpenseForm, setShowExpenseForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
     const [message, setMessage] = useState("")//altero o texto da mensagem
@@ -31,7 +33,8 @@ export const Trip = () => {
             })
                 .then((resp) => resp.json())
                 .then((data) => {
-                    setTrip(data)
+                    setTrip(data)//pega o que chega das viagens
+                    setExpenses(data.expenses)//pega o que chega das despesas
                 })
                 .catch((err) => console.log(err))
 
@@ -67,6 +70,8 @@ export const Trip = () => {
     }
 
     function createExpense(trip) {
+        setMessage("")//começo vazio pra que ele apareça novamente, caso deva aparecer a msg
+
         //vai pegar a última despesa
         const lastExpense = trip.expenses[trip.expenses.length - 1]//pego a última despesa criada
         lastExpense.id = uuidv4()//id único que vai servir pra renderizar as listas no react
@@ -82,6 +87,29 @@ export const Trip = () => {
             trip.expenses.pop();//elimino essa despesa inválido
             return false
         }
+
+        //adicionará a despesa no valor total da viagem
+        trip.cost = newCost
+
+        //atualizar viagem
+        fetch(`http://localhost:5000/trips/${trip.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(trip)//preciso do body pq tá enviando dados a serem atualizados
+        })
+            .then(resp => resp.json())
+            .then((data) => {
+                setTrip(data)
+                setShowTripForm(false)
+                setMessage(`A despesa foi adicionada com sucesso!`)
+                setType("success");
+            })
+            .catch(err => console.error(err))
+
+        setMessage()
+
     }
 
     function toggleTripForm() {//função somente para alterar o estado.
@@ -127,7 +155,7 @@ export const Trip = () => {
 
                     <div className={styles.container_expense}>
 
-                        <h2>Adicione um gasto</h2>
+                        <h2>Adicione uma despesa</h2>
                         <button className={styles.btn} onClick={toggleExpenseForm}>
                             {!showExpenseForm ? 'Adicionar' : 'Fechar'}
                         </button>
@@ -141,7 +169,20 @@ export const Trip = () => {
                     </div>
                     <h2>Despesas</h2>
                     <Container customClass="start">
-                        <p className={styles.p_expenses}>Itens de despesas</p>
+                        {expenses.length > 0 &&
+                            expenses.map((expense) => (//no jsx quando faço um map precisa estar entre parênteses
+                                <ExpenseCard
+                                    id={expense.id}
+                                    name={expense.name}
+                                    cost={expense.cost}
+                                    description={expense.description}
+                                    key={expense.id}
+                                />
+                            ))
+                        
+                        }
+                        {expenses.length === 0 && <p className={styles.p_expenses}>Não há despesas cadastradas!</p>}
+                       
                     </Container>
                 </Container>
 
