@@ -1,11 +1,14 @@
+import { parse, v4 as uuidv4 } from "uuid"
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { TfiLocationPin } from "react-icons/tfi"
+import { TfiLocationPin } from "react-icons/tfi";
 
 import Loading from "../layoult/Loading";
 import Container from "../layoult/Container";
-import TripForm from "../trip/TripForm"
-import Message from "../layoult/Message"
+import TripForm from "../trip/TripForm";
+import Message from "../layoult/Message";
+import ExpensesForm from "../expenses/ExpensesForm";
 
 import styles from "./Trip.module.css";
 
@@ -62,6 +65,25 @@ export const Trip = () => {
         setMessage()
     }
 
+    function createExpense(trip) {
+        //vai pegar a última despesa
+        const lastExpense = trip.expenses[trip.expenses.length - 1]
+        lastExpense.id = uuidv4()//id único que vai servir pra renderizar as listas no react
+
+        const lastExpenseCost = lastExpense.cost;
+
+        const newCost = parseFloat(trip.cost) + parseFloat(lastExpenseCost);/*esse é o custo 
+        que vai ter na viagem toda quando eu adicionar essa despesa*/
+
+        if (newCost > parseFloat(trip.budget)) {//se passou do valor máximo disponível
+            setMessage("Orçamento ultrapassado!");
+            setType("error");
+            trip.expenses.pop();//elimino esse serviço inválido
+            return false
+        }
+
+    }
+
     function toggleTripForm() {//função somente para alterar o estado.
         setShowTripForm(!showTripForm);
     }
@@ -110,12 +132,16 @@ export const Trip = () => {
                             {!showExpenseForm ? 'Adicionar' : 'Fechar'}
                         </button>
                         <div className={styles.div_info}>
-                            {showExpenseForm && <div>formulário da despesa</div>}
+                            {showExpenseForm && <ExpensesForm
+                                handleSubmit={createExpense}
+                                btnText="Adicionar despesa"
+                                tripData={trip}
+                            />}
                         </div>
                     </div>
                     <h2>Despesas</h2>
                     <Container customClass="start">
-                        <p>Itens de despesas</p>
+                        <p className={styles.p_expenses}>Itens de despesas</p>
                     </Container>
                 </Container>
 
