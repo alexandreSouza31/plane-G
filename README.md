@@ -1,7 +1,6 @@
 # Plane-G!
 
 It's a travel planner where you can manage various expenses.
-(in progress...)
 
 ## Table of contents
 
@@ -18,9 +17,12 @@ It's a travel planner where you can manage various expenses.
 ## Overview
 
 ### Screenshot
-![galaxy s8](https://github.com/alexandreSouza31/plane-G/assets/112407769/1e6b3f6e-9ac5-4792-bf4d-3ac7994824a5)
-
 ![ipad air](https://github.com/alexandreSouza31/plane-G/assets/112407769/55487125-a96a-4efd-aa53-babf538a2ea8)
+
+![s20 ultra](https://github.com/alexandreSouza31/plane-G/assets/112407769/397335ff-eb30-4369-9da7-a581c84cf099)
+
+
+![s20 ultra](https://github.com/alexandreSouza31/plane-G/assets/112407769/27dae212-ea8c-4305-8d77-f3ff556830f8)
 
 ## My process
 
