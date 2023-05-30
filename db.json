@@ -53,49 +53,13 @@
         "id": "1",
         "name": "Lazer"
       },
-      "cost": 17107,
+      "cost": null,
       "expenses": [
         {
-          "name": "comida",
-          "cost": "3000",
-          "description": "restaurantes",
-          "id": "9f0ed882-df28-491a-a68d-ca5483cc777b"
-        },
-        {
-          "name": "hotel",
-          "cost": "8000",
-          "description": "Hote; 3 estrelas",
-          "id": "50aa11bd-c7d4-4d3a-8c67-e90af0e3a029"
-        },
-        {
-          "name": "qq coisa",
-          "cost": "200",
-          "description": "isso",
-          "id": "da431d73-7586-49b3-b738-16500f1f64de"
-        },
-        {
-          "name": "qq coisa2",
-          "cost": "202",
-          "description": "isso",
-          "id": "83110c71-e037-48a4-a823-6f4a830bd28a"
-        },
-        {
-          "name": "qq coisa 3",
-          "cost": "205",
-          "description": "isso",
-          "id": "39fa2e8a-4b4f-4f8a-bd05-076ea21549f7"
-        },
-        {
-          "name": "qqqq5",
+          "name": "passagem",
           "cost": "5000",
-          "description": "asss",
-          "id": "094da074-d265-4ea7-9a6d-1f269c22864c"
-        },
-        {
-          "name": "qqqq6",
-          "cost": "500",
-          "description": "asss",
-          "id": "eb602c11-a947-46c5-a60f-dfec74ce43b3"
+          "description": "passagem com escala",
+          "id": "f36e8aa6-6b4a-4ff8-9d31-43c4e6e64a8b"
         }
       ],
       "id": 2
@@ -107,8 +71,15 @@
         "id": "3",
         "name": "Outros"
       },
-      "cost": 0,
-      "expenses": [],
+      "cost": 2500,
+      "expenses": [
+        {
+          "name": "passagem",
+          "cost": "2500",
+          "description": "passagem ida e volta",
+          "id": "18a633d6-2a26-4c1e-860a-69d8120f9615"
+        }
+      ],
       "id": 3
     },
     {

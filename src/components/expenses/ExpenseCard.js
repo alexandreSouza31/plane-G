@@ -4,7 +4,8 @@ import {BsFillTrashFill} from "react-icons/bs"
 
 const ExpenseCard = ({ id, name, cost, description, handleRemove }) => {
     const remove = (e) => {
-        //
+        e.preventDefault()
+        handleRemove(id,cost)
     }
     return (
         <div className={styles.card_container_expense}>

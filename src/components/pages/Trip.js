@@ -38,7 +38,6 @@ export const Trip = () => {
                 })
                 .catch((err) => console.log(err))
 
-
         }, 2000);
     }, [id])
 
@@ -109,7 +108,34 @@ export const Trip = () => {
             .catch(err => console.error(err))
 
         setMessage()
+    }
 
+    function removeExpense(id,cost) {
+        
+        const expensesUpdated = trip.expenses.filter(
+            (expense) => expense.id !== id//vão permanecer os ids diferentes do removido 
+        )
+
+        const tripUpdated = trip
+        tripUpdated.expenses = expensesUpdated;
+        tripUpdated.cost = parseFloat(tripUpdated.cost) - parseFloat(cost)
+        
+        fetch(`http://localhost:5000/trips/${tripUpdated.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(tripUpdated)
+        })
+            .then(resp => resp.json())
+            .then((data) => {
+                setTrip(data)
+                setTrip(tripUpdated)
+                setExpenses(expensesUpdated)
+                setMessage(`A despesa foi excluída com sucesso!`)
+                setType("success");
+            })
+            .catch(err => console.error(err))
     }
 
     function toggleTripForm() {//função somente para alterar o estado.
@@ -177,12 +203,12 @@ export const Trip = () => {
                                     cost={expense.cost}
                                     description={expense.description}
                                     key={expense.id}
+                                    handleRemove={removeExpense}
                                 />
                             ))
-                        
                         }
                         {expenses.length === 0 && <p className={styles.p_expenses}>Não há despesas cadastradas!</p>}
-                       
+
                     </Container>
                 </Container>
 

@@ -8,12 +8,6 @@ const ExpensesForm = ({ handleSubmit, btnText, tripData }) => {//props
     
     const [expense,setExpense]=useState({})
 
-    // function submit(e) {
-    //     e.preventDefault();
-    //     tripData.service.push(service);//possoter mais de uma despesa por viagem
-    //     handleSubmit(tripData);
-    // }
-
     const submit = (e) => {
         e.preventDefault()
         tripData.expenses.push(expense)
