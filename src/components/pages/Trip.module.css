@@ -1,9 +1,9 @@
-.container_details{
+    .div_details,.div_service{
     padding: 2rem;
-    width: 90vw;
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
-    align-items:first baseline;
+   justify-content: center;
+      align-items:first baseline;
     flex-wrap: wrap;
 }
 
@@ -21,12 +21,20 @@
     border-radius: 4px;
 }
 
-.div_details,.div_service{
+.container_details,.container_service{
+    display: flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    flex-wrap: wrap;
     border-bottom: 1px solid #7a7a7a;
     margin-bottom: 1.2rem;
     padding-bottom: 1.2rem;
 }
 
+.container_service{
+    width: 90vw;
+
+}
 .btn {
     background-color: #333;
     color: whitesmoke;
@@ -40,4 +48,4 @@
 
 .btn:hover {color: #efe011;}
 
-.div_info{width: 100vw;}
+.div_info{width: 90vw;}

@@ -8,7 +8,7 @@
 }
 
 .min-height {
-    min-height: 75vh;
+    min-height: 77vh;
 }
 
 .start {
@@ -18,4 +18,10 @@
 .column {
     flex-direction: column;
     justify-content: flex-start;
+}
+
+@media screen and (min-width:800px) {
+    .min-height {
+        min-height: 80vh;
+    }
 }
