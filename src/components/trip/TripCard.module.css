@@ -15,8 +15,7 @@
 
 .card_container_expense {
     width: 250px;
-    word-break: break-all;
-    overflow-y: scroll;
+    margin: 1rem auto;
 }
 
 .h4_container {
@@ -73,11 +72,16 @@
 }
 
 .description_expense{
-    height: 80px;
+    max-height: 80px;
     overflow-y: scroll;
     margin: 1rem 0;
     padding: .5rem;
     border: whitesmoke solid 1px;
+    border-radius: 4px;
+}
+
+.card_container_expense .trip_card_actions button{
+    border-color: #222;
 }
 
 .trip_card_actions {
