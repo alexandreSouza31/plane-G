@@ -1,4 +1,5 @@
-.card_container {
+.card_container,
+.card_container_expense {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +11,12 @@
     padding: 1rem;
     border-radius: 4px;
     margin: .5rem auto;
+}
+
+.card_container_expense {
+    width: 250px;
+    word-break: break-all;
+    overflow-y: scroll;
 }
 
 .h4_container {
@@ -63,6 +70,14 @@
 
 .category_text .outros {
     background-color: rgba(24, 248, 155, 0.365);
+}
+
+.description_expense{
+    height: 80px;
+    overflow-y: scroll;
+    margin: 1rem 0;
+    padding: .5rem;
+    border: whitesmoke solid 1px;
 }
 
 .trip_card_actions {
