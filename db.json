@@ -8,7 +8,7 @@
         "name": "Lazer"
       },
       "cost": 0,
-      "services": [],
+      "expenses": [],
       "id": 1
     },
     {
@@ -19,7 +19,7 @@
         "name": "Lazer"
       },
       "cost": 0,
-      "services": [],
+      "expenses": [],
       "id": 2
     },
     {
@@ -30,7 +30,7 @@
         "name": "Outros"
       },
       "cost": 0,
-      "services": [],
+      "expenses": [],
       "id": 3
     },
     {
@@ -41,7 +41,7 @@
         "name": "Trabalho"
       },
       "cost": 0,
-      "services": [],
+      "expenses": [],
       "id": 4
     },
     {
@@ -52,7 +52,7 @@
         "name": "Lazer"
       },
       "cost": 0,
-      "services": [],
+      "expenses": [],
       "id": 5
     }
   ],

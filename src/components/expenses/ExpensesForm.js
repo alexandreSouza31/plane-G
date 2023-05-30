@@ -8,18 +8,24 @@ const ExpensesForm = ({ handleSubmit, btnText, tripData }) => {//props
     
     const [expense,setExpense]=useState({})
 
-    function submit(e) {
-        e.preventDefault();
-        tripData.expense.push(expense);
-        handleSubmit(tripData);
-    }
+    // function submit(e) {
+    //     e.preventDefault();
+    //     tripData.service.push(service);//possoter mais de uma despesa por viagem
+    //     handleSubmit(tripData);
+    // }
+
+    const submit = (e) => {
+        e.preventDefault()
+        tripData.expenses.push(expense)
+        handleSubmit(tripData)
+      }
 
     function handleChange(e) {
         setExpense({...expense,[e.target.name]:e.target.value})//faço o spread operator pra pegar a despesa atual
     }
 
     return (
-        <form action={submit} className={styles.form}>
+        <form onSubmit={submit} className={styles.form}>
             <Input
                 type="text"
                 text="Nome da despesa"

@@ -8,7 +8,7 @@ function NewTrip() {
     function createPost(trip) {
         // inicializa o Plane-G! e os serviços
         trip.cost = 0
-        trip.services = []
+        trip.expenses = []
 
         fetch("http://localhost:5000/trips", {
             method: "POST",

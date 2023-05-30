@@ -18,7 +18,7 @@ export const Trip = () => {
     const [trip, setTrip] = useState([])
     const [showTripForm, setShowTripForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
     const [showExpenseForm, setShowExpenseForm] = useState(false)//mostrará ou não os dados do projeto(inicialmente não mostrará!).
-    const [message, setMessage] = useState()//altero o texto da mensagem
+    const [message, setMessage] = useState("")//altero o texto da mensagem
     const [type, setType] = useState()//altero o tipo da mensagem
 
     useEffect(() => {
@@ -48,6 +48,7 @@ export const Trip = () => {
 
         fetch(`http://localhost:5000/trips/${trip.id}`, {
             method: "PATCH",
+            // method: "PUT",
             headers: {
                 "Content-type": "application/json"
             },
@@ -67,7 +68,7 @@ export const Trip = () => {
 
     function createExpense(trip) {
         //vai pegar a última despesa
-        const lastExpense = trip.expenses[trip.expenses.length - 1]
+        const lastExpense = trip.expenses[trip.expenses.length - 1]//pego a última despesa criada
         lastExpense.id = uuidv4()//id único que vai servir pra renderizar as listas no react
 
         const lastExpenseCost = lastExpense.cost;
@@ -78,10 +79,9 @@ export const Trip = () => {
         if (newCost > parseFloat(trip.budget)) {//se passou do valor máximo disponível
             setMessage("Orçamento ultrapassado!");
             setType("error");
-            trip.expenses.pop();//elimino esse serviço inválido
+            trip.expenses.pop();//elimino essa despesa inválido
             return false
         }
-
     }
 
     function toggleTripForm() {//função somente para alterar o estado.
