@@ -26,12 +26,6 @@ function Hamburger() {
                         <li className={active ? `${styles.item}` : `${styles.item_close}`}>
                             <Link to="/newtrip" onClick={ToggleMod}>Nova Viagem</Link>
                         </li>
-                        <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/company" onClick={ToggleMod}>Empresa</Link>
-                        </li>
-                        <li className={active ? `${styles.item}` : `${styles.item_close}`}>
-                            <Link to="/contact" onClick={ToggleMod}>Contato</Link>
-                        </li>
 
                     </ul>
                 </div>
