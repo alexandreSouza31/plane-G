@@ -1,11 +1,11 @@
-.burger_buttom{
+.burger_buttom {
     list-style: none;
     border: none;
     background-color: transparent;
     font-size: 2rem;
 }
 
-.icon{
+.icon {
     position: relative;
     width: 40px;
     height: 40px;
@@ -13,8 +13,8 @@
     z-index: 3;
 }
 
-.hamburger{
-    top:50%;
+.hamburger {
+    top: 50%;
     width: 25px;
     height: 6px;
     position: relative;
@@ -22,7 +22,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.hamburger::before{
+.hamburger::before {
     top: -12px;
     content: "";
     position: absolute;
@@ -32,7 +32,8 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: .5s;
 }
-.hamburger::after{
+
+.hamburger::after {
     top: 12px;
     content: "";
     position: absolute;
@@ -43,14 +44,14 @@
     transition: .5s;
 }
 
-.menu.menu_open{
+.menu.menu_open {
     display: flex;
     flex-direction: column;
     justify-content: end;
     position: absolute;
     top: 0%;
     left: 0px;
-    width:30%;
+    width: 30%;
     height: 300px;
     background-color: #202020af;
     box-shadow: 10px 0 69px 0 rgba(0, 0, 0, .59);
@@ -59,67 +60,77 @@
     z-index: 2;
 }
 
-.list{
+.list {
     text-align: center;
     padding: 45px auto;
     font-size: 1.2rem;
     font-weight: 600;
-} 
+}
 
-.list .list_itens{
+.list .list_itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 0;
     list-style: none;
 }
 
-.list_itens .item{
+.list_itens .item {
     margin: 1rem .5rem;
     cursor: pointer;
     color: white;
 
 }
-.list_itens .item:hover{
-   font-weight: 800;
+
+.list_itens .item:hover {
+    font-weight: 800;
 }
 
-.item_close{
+.item_close {
     display: none;
 }
 
-.item a{
+.item a {
     color: rgb(172, 172, 172);
     text-decoration: none;
 }
 
-.item a:hover{
+.item a:hover {
     color: #ccc;
     font-weight: bold;
 }
 
-.icon.icon_active .hamburger{
+.icon.icon_active .hamburger {
     background: transparent;
     box-shadow: 0 2px 5px transparent;
 }
 
-.icon.icon_active .hamburger::after{
+.icon.icon_active .hamburger::after {
     top: 0;
     background-color: #fff;
     transform: rotate(225deg);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, .2);
 }
-.icon.icon_active .hamburger::before{
+
+.icon.icon_active .hamburger::before {
     top: 0;
     background-color: #fff;
     transform: rotate(135deg);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, .2);
 }
 
-@media only screen and (min-width: 600px) {/*medium devices*/
-    .menu.menu_open{
-       width: 15%;
+@media only screen and (min-width: 600px) {
+
+    /*medium devices*/
+    .menu.menu_open {
+        width: 15%;
     }
 }
-@media only screen and (min-width: 1200px) {/*medium devices*/
-    .menu.menu_open{
-       width: 10%;
+
+@media only screen and (min-width: 1200px) {
+
+    /*medium devices*/
+    .menu.menu_open {
+        width: 10%;
     }
 }
