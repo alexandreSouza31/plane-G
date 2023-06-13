@@ -25,7 +25,7 @@ export const Trip = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`http://localhost:5000/trips/${id}`, {
+            fetch(`https://jason-server.vercel.app/trips/${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const Trip = () => {
             return false;
         }
 
-        fetch(`http://localhost:5000/trips/${trip.id}`, {
+        fetch(`https://jason-server.vercel.app/trips/${trip.id}`, {
             method: "PATCH",
             // method: "PUT",
             headers: {
@@ -91,7 +91,7 @@ export const Trip = () => {
         trip.cost = newCost
 
         //atualizar viagem
-        fetch(`http://localhost:5000/trips/${trip.id}`, {
+        fetch(`https://jason-server.vercel.app/trips/${trip.id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json"
@@ -120,7 +120,7 @@ export const Trip = () => {
         tripUpdated.expenses = expensesUpdated;
         tripUpdated.cost = parseFloat(tripUpdated.cost) - parseFloat(cost)
         
-        fetch(`http://localhost:5000/trips/${tripUpdated.id}`, {
+        fetch(`https://jason-server.vercel.app/trips/${tripUpdated.id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json"
