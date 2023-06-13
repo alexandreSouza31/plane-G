@@ -74,7 +74,7 @@
 .description_expense {
     max-height: 80px;
     width: 200px;
-    overflow: scroll;
+    overflow-y: scroll;
     word-break: break-all;
     margin: 1rem auto;
     padding: .5rem;
