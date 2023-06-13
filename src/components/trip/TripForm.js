@@ -10,7 +10,7 @@ function TripForm({ handleSubmit, btnText, tripData }) {//btnText vem lá do com
 
     useEffect(() => {
         //vou precisar fazer um request:
-        fetch("https://jason-server.vercel.app/categories", {
+        fetch("http://localhost:5000/categories", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

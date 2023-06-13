@@ -10,7 +10,7 @@ function NewTrip() {
         trip.cost = 0
         trip.expenses = []
 
-        fetch("https://jason-server.vercel.app/trips", {
+        fetch("http://localhost:5000/trips", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
