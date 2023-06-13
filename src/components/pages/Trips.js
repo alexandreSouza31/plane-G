@@ -22,7 +22,7 @@ function Trips() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("http://localhost:5000/trips", {
+            fetch("https://jason-server.vercel.app/trips", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -39,7 +39,7 @@ function Trips() {
 
 
     function removeTrip(id) {
-        fetch(`http://localhost:5000/trips/${id}`, {
+        fetch(`https://jason-server.vercel.app/trips/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-type": "application/json"
