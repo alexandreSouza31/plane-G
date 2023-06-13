@@ -16,32 +16,10 @@
           "id": "56db94da-6aff-4fb6-b83f-00dde425a797"
         },
         {
-          "name": "passeio",
-          "cost": "300",
-          "description": "fabrica de chocolate e coisa e tal, e pa e dekcdcdcdsvccvfcsdfcsdfcdscfvcfvfccf",
-          "id": "0e8b1677-5b79-4bac-bc06-d30c6309793b"
-        },
-        {
-          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssddddddddddddddddddddddddd",
-          "id": "cd44dc78-a5d6-41e4-8cdf-d3a9841ff2b5"
-        },
-        {
-          "name": "qq coisa",
-          "cost": "200",
-          "description": "isso",
-          "id": "de5943e4-87a4-43aa-a5f4-b8300012904e"
-        },
-        {
-          "name": "qq coisa",
-          "cost": "200",
-          "description": "isso",
-          "id": "b98d1802-11a0-486f-9a86-180ee285af00"
-        },
-        {
-          "name": "qq coisa",
-          "cost": "200",
-          "description": "isso",
-          "id": "9de657c2-be15-4501-ba5c-efa3772ffc06"
+          "name": "refeição",
+          "cost": "1000",
+          "description": "almoços",
+          "id": "f5270ffc-ae61-4519-ba20-3a0c80257901"
         }
       ],
       "id": 1
