@@ -92,8 +92,15 @@ Mobile first, clean code, refactoring, ReactJS.
 
 ### How to run the code? 
 
+Step 1 - Clone/download the project
+1- Open the terminal of your code editor; 2- Navigate to the root folder of the project; 3- Enter the command git clone https://github.com/alexandreSouza31/plane-G in the terminal, or if you prefer, download by clicking on the green button called "Code" in the repository of this project, and then "Download zip.
 
-you can download it to your machine, open the code editor terminal, go into the root folder of the project and type 'npm run backend', to run the fake database. Open another terminal (click the + sign in the terminal) and type npm start. Wait for the terminal to complete and it will automatically open an address like 'localhost:3000/' or equivalent in your browser. 
+Step 2 - Installing dependencies
+1- still in the terminal type the command npm install or yarn install.
+
+Step 3 - Starting the project
+1- Type npm start (without quotes) in the terminal; 2- Wait until a localhost address is shown in the terminal (localhost:300/' or equivalent); 3- Copy the address and paste it in the browser, or hold the CTRL key and click on the address in the terminal.
+2- Open another terminal, and still in the root folder of the project, type 'npm run backend', to run the fake database.
 
 
  :)
